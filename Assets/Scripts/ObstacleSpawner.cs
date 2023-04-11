@@ -1,53 +1,53 @@
 using UnityEngine;
 
-public class VictimSpawn : MonoBehaviour
+public class ObstacleSpawner : MonoBehaviour
 {
-    public GameObject victimToSpawn; // The object to be spawned  
+    public GameObject obstacle; // The object to be spawned  
 
-    public int numberOfVictims = 5; //Number of victims to spawn
+    public int numberOfObstacles; //Number of victims to spawn
     public int minIndexX = -11; // The minimum index of the spawn points array on X axis
     public int maxIndexX = 11; // The maximum index of the spawn points array on X axis
     public int minIndexY = 8; // The minimum index of the spawn points array on Y axis
     public int maxIndexY = -6; // The maximum index of the spawn points array on Y axis
-    
+
 
     public void Start()
     {
-        //Spawn X number of victims on start
-        for (int i = 0; i < numberOfVictims; i++)
-        {           
-            SpawnObject(victimToSpawn);
+        for (int i = 0; i < numberOfObstacles; i++)
+        {
+            SpawnObject(obstacle);
 
         }
+    }
+
+    public ObstacleSpawner(GameObject obstacle, int numberOfObstacles)
+    {
+        this.obstacle = obstacle;
+        this.numberOfObstacles = numberOfObstacles;
     }
 
 
 
     public void Update()
     {
-        
+
     }
 
-    public void SpawnObject(GameObject objectToSpawn) //Function to sapwn a victim
-    {   
-        int safety = 0; //Number that secures the while loop stops
-
-        //Creates random spawnpoint to spawn the victim at
+    public void SpawnObject(GameObject objectToSpawn)
+    {
+        int safety = 0;
         Vector3 randomSpawnPoint = new Vector3((int)Random.Range(minIndexX, maxIndexX + 1), (int)Random.Range(minIndexY, maxIndexY + 1), 0);
-        
-        //Gets the victims collider
+
         Vector3 boxSize = objectToSpawn.GetComponent<BoxCollider>().bounds.size;
-        
-        //Check if the victim is colliding with any other object
-        //If not it tries to find a new spot
+
         while (Physics.CheckBox(randomSpawnPoint, boxSize, Quaternion.identity) && safety < 100)
         {
             randomSpawnPoint = new Vector3((int)Random.Range(minIndexX, maxIndexX + 1), (int)Random.Range(minIndexY, maxIndexY + 1), 0);
-            safety++; //When safety reaches 100 the object is spawned regardless. Should not be a problem as long as there is only 5-10 victims
+            safety++;
         }
-        
-        //Instantiates the victim
+
         Instantiate(objectToSpawn, randomSpawnPoint, Quaternion.identity);
+
     }
 }
 
