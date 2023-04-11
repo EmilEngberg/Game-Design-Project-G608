@@ -8,11 +8,15 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D characterBody;
     private Vector2 velocity;
     private Vector2 inputMovement;
+    // private PickUp pickUp; 
 
     void Start()
     {
         velocity = new Vector2(speed, speed);
         characterBody = GetComponent<Rigidbody2D>();
+        /* pickUp = gameObject.GetComponent<PickUp>();
+        pickUp.Direction = new Vector2(0, -1); */
+
     }
     
     void Update()
@@ -20,7 +24,15 @@ public class PlayerMovement : MonoBehaviour
         inputMovement = new Vector2(
         Input.GetAxisRaw("Horizontal"),
         Input.GetAxisRaw("Vertical")
-        );
+        ); 
+        
+        
+        /*if (inputMovement.sqrMagnitude > .1f) 
+        {
+            pickUp.Direction = inputMovement;        
+        }*/
+      
+
     }
 
     private void FixedUpdate()
