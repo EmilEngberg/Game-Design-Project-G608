@@ -36,7 +36,7 @@ public class VictimSpawn : MonoBehaviour
         Vector3 randomSpawnPoint = new Vector3((int)Random.Range(minIndexX, maxIndexX + 1), (int)Random.Range(minIndexY, maxIndexY + 1), 0);
         
         //Gets the victims collider
-        Vector3 boxSize = objectToSpawn.GetComponent<BoxCollider>().bounds.size;
+        Vector3 boxSize = objectToSpawn.GetComponent<BoxCollider2D>().bounds.size;
         
         //Check if the victim is colliding with any other object
         //If not it tries to find a new spot
