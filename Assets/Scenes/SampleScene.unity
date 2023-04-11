@@ -3576,7 +3576,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1658822514
 Rigidbody2D:
@@ -3849,6 +3849,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 357045804953324573, guid: 52219258637d6ab428be843166d3f641, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3472807872437070014, guid: 52219258637d6ab428be843166d3f641, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -3865,6 +3869,10 @@ PrefabInstance:
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 870ba174ad8dadd468086ca456d90cf0, type: 2}
+    - target: {fileID: 6360926322948099061, guid: 52219258637d6ab428be843166d3f641, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4656602594653145350, guid: 870ba174ad8dadd468086ca456d90cf0, type: 2}
     - target: {fileID: 6360926322948099061, guid: 52219258637d6ab428be843166d3f641, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
