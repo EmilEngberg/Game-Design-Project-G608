@@ -45,7 +45,7 @@ public class VictimSpawn : MonoBehaviour
             randomSpawnPoint = new Vector3((int)Random.Range(minIndexX, maxIndexX + 1), (int)Random.Range(minIndexY, maxIndexY + 1), 0);
             safety++; //When safety reaches 100 the object is spawned regardless. Should not be a problem as long as there is only 5-10 victims
         }
-        
+        Debug.Log(safety);
         //Instantiates the victim
         Instantiate(objectToSpawn, randomSpawnPoint, Quaternion.identity);
     }
