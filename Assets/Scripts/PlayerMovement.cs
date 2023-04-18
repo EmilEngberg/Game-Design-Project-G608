@@ -41,4 +41,13 @@ public class PlayerMovement : MonoBehaviour
         Vector2 newPosition = characterBody.position + delta;
         characterBody.MovePosition(newPosition);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("HitStuff");
+        if (collision.gameObject.layer == LayerMask.NameToLayer("SafeZone"))
+        {
+            Debug.Log("InSafeZone");
+        }
+    }
 }
