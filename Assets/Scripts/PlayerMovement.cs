@@ -44,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("HitStuff");
         if (collision.gameObject.layer == LayerMask.NameToLayer("SafeZone"))
         {
             Debug.Log("InSafeZone");

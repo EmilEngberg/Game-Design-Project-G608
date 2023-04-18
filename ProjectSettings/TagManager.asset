@@ -13,7 +13,7 @@ TagManager:
   - Water
   - UI
   - Obstacle
-  - 
+  - SafeZone
   - 
   - PickUp
   - 
@@ -45,12 +45,12 @@ TagManager:
   - name: Background
     uniqueID: 3649261635
     locked: 0
-  - name: Player
+  - name: SafeZone
     uniqueID: 1180823913
     locked: 0
   - name: Obstacle
     uniqueID: 3959119617
     locked: 0
-  - name: New Layer 4
+  - name: Player
     uniqueID: 260495839
     locked: 0
