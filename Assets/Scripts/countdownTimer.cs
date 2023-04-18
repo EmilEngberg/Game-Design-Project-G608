@@ -11,6 +11,7 @@ public class countdownTimer : MonoBehaviour
     float currentTime;
     public int startTime;
     public TextMeshProUGUI countdownText;
+    public EndScreenManager endScreenManager;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class countdownTimer : MonoBehaviour
             {
                 timerActive = false;
                 Start();
-                //End screen kode skal være her, så når timeren slutter, så kommer der en end screen of sorts
+                endScreenManager.SetGameOver();
                 Debug.Log("Game has ended!");
             }
         }
