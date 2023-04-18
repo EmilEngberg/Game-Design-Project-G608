@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - ScoreManager
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - SafeZone
   - 
   - PickUp
-  - 
+  - ScoreManager
   - 
   - 
   - 
@@ -51,6 +52,12 @@ TagManager:
   - name: Obstacle
     uniqueID: 3959119617
     locked: 0
-  - name: Player
+  - name: Victims
     uniqueID: 260495839
+    locked: 0
+  - name: Player
+    uniqueID: 845778339
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 2673227757
     locked: 0
