@@ -18,12 +18,15 @@ public class EndScreenManager : MonoBehaviour
 
         scoreText.gameObject.SetActive(false);
         countdownText.gameObject.SetActive(false);
+
+        Time.timeScale = 0;
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene("SampleScene");
         Debug.Log("Game Restarted");
-        //gameOverScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
+        Time.timeScale = 1;
     }
 }
