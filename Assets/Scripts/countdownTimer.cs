@@ -12,11 +12,12 @@ public class countdownTimer : MonoBehaviour
     public int startTime;
     public TextMeshProUGUI countdownText;
 
+    public EndScreenManager endScreenManager;
+
     // Start is called before the first frame update
     void Start()
     {
         currentTime = startTime * 60;
-
     }
 
     // Update is called once per frame
@@ -25,11 +26,11 @@ public class countdownTimer : MonoBehaviour
         if (timerActive == true)
         {
             currentTime = currentTime - Time.deltaTime;
-            if (currentTime <= 0)
+            if (currentTime <= 0) //Decides what happens when the time runs out
             {
                 timerActive = false;
-                Start();
-                //End screen kode skal være her, så når timeren slutter, så kommer der en end screen of sorts
+                //Start();
+                endScreenManager.SetGameOver(); //Game Over UI appears when time runs out
                 Debug.Log("Game has ended!");
             }
         }
