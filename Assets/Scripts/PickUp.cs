@@ -10,10 +10,13 @@ public class PickUp : MonoBehaviour
     public Transform holdSpot;
     // filter the objects that are just in the layer mask pick up
     public LayerMask pickUpMask;
+    public LayerMask safeZone;
     // which direction is the player facing
     public Vector3 Direction {get; set;}
     // store the game object so we can access it when we need to drop it
     private GameObject itemHolding;
+
+    private GameObject scoreManager;
 
     // Update is called once per frame
     void Update()
@@ -28,11 +31,19 @@ public class PickUp : MonoBehaviour
                 itemHolding.transform.position = transform.position + Direction;
                 // remove item from the player
                 itemHolding.transform.parent = null;
+
+                if (Physics2D.OverlapCircle(transform.position + Direction, .4f, safeZone))
+                {                
+                        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager");
+                        scoreManager.GetComponent<ScoreManager>().AddPoints();
+                }
+
                 //check for rigidbody --> set simulated to true 
-                 if (itemHolding.GetComponent<Rigidbody2D>())
+                if (itemHolding.GetComponent<Rigidbody2D>())
                  {
                     itemHolding.GetComponent<Rigidbody2D>().simulated = true;
                  }
+
                 //clear the item holding the game object:
                 itemHolding = null;
             }
@@ -62,4 +73,5 @@ public class PickUp : MonoBehaviour
 
         }
     }
+
 }

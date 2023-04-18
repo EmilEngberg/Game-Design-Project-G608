@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 inputMovement;
     // private PickUp pickUp; 
 
+    private GameObject scoreManager;
+
     void Start()
     {
         velocity = new Vector2(speed, speed);
@@ -42,11 +44,12 @@ public class PlayerMovement : MonoBehaviour
         characterBody.MovePosition(newPosition);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("SafeZone"))
         {
-            Debug.Log("InSafeZone");
+            scoreManager = GameObject.FindGameObjectWithTag("ScoreManager");
+            scoreManager.GetComponent<ScoreManager>().AddPoints();
         }
-    }
+    }*/
 }
