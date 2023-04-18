@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: -5997053478219640158}
   - component: {fileID: 8460180576020763529}
   m_Layer: 9
+  - component: {fileID: -3836968284124008258}
+  m_Layer: 6
   m_Name: ManInNeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,6 +89,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &-5997053478219640158
+--- !u!61 &-3836968284124008258
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
