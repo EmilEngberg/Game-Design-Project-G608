@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D characterBody;
     private Vector2 velocity;
     private Vector2 inputMovement;
+    public Animator animator;
 
     public int PowerUpBoost = 10; //Powerup speed
 
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {   //Sets the speed in x and y, grabs the Rigidbody component from the inspector
         velocity = new Vector2(speed, speed);
         characterBody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>(); 
 
     }
 
@@ -41,10 +43,22 @@ public class PlayerMovement : MonoBehaviour
     {   //Gets the keyboard input as the x and y (its a vector 2)
         inputMovement = new Vector2(
         Input.GetAxisRaw("Horizontal"),
-        Input.GetAxisRaw("Vertical")); 
+        Input.GetAxisRaw("Vertical"));
 
-    // Checks for collision with the power-up object in the layer "PowerUp"
-    Collider2D powerUpCollider = Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("PowerUp"));
+        animator.SetFloat("moveX", inputMovement.x);
+        animator.SetFloat("moveY", inputMovement.y);
+
+        if (inputMovement != Vector2.zero)
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
+
+        // Checks for collision with the power-up object in the layer "PowerUp"
+        Collider2D powerUpCollider = Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("PowerUp"));
 
     if (powerUpCollider != null)
         {
