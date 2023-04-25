@@ -8,6 +8,7 @@ using System;
 public class countdownTimer : MonoBehaviour
 {
     bool timerActive = true;
+    bool victimsSaved = false;
     float currentTime;
     public int startTime;
     public TextMeshProUGUI countdownText;
@@ -37,6 +38,17 @@ public class countdownTimer : MonoBehaviour
         }
         TimeSpan time = TimeSpan.FromSeconds(currentTime); //Stores the current time as seconds, makes it easy to convert to minutes
         countdownText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString(); //Utilizes line 38 to display the time in minutes and seconds
+        
+        if(victimsSaved == false)
+        {   
+            //Checks if there is any victims left to save
+            if(GameObject.FindGameObjectWithTag("Victim") == null)
+            {
+                Debug.Log("I WIN");
+                //MARTINS UI MAGI KOMMER HER
+                victimsSaved = true;
+            }
+        }
     }
 
     public void StartTimer()
