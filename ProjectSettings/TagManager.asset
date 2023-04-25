@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - ScoreManager
+  - Victim
   layers:
   - Default
   - TransparentFX

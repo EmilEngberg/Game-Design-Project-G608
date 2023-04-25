@@ -39,6 +39,7 @@ public class PickUp : MonoBehaviour
                         scoreManager.GetComponent<ScoreManager>().AddPoints();
                         //Destroys the item, so the player cant get infinite points  
                         Destroy(itemHolding);
+
                 }
 
                 //check for rigidbody --> set simulated to true 
