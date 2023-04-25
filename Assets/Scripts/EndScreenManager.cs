@@ -7,6 +7,8 @@ public class EndScreenManager : MonoBehaviour
 {
     //Defining the different elements of the gameOverScreen
     public GameObject gameOverScreen;
+    public GameObject scoreTextBackground;
+    public GameObject countdownTextBackground;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI peopleLeftText;
     public TextMeshProUGUI countdownText;
@@ -18,7 +20,10 @@ public class EndScreenManager : MonoBehaviour
         peopleLeftText.text = scoreText.text; //The scoreText will be shown with the score 
 
         scoreText.gameObject.SetActive(false); //The scoreText UI gameObject is removed
+        scoreTextBackground.gameObject.SetActive(false); //The scoreText UI background gameObject is removed
         countdownText.gameObject.SetActive(false); //The countdown timer UI gameObject is removed
+        countdownTextBackground.gameObject.SetActive(false); //The countdown timer background UI gameObject is removed
+
 
         Time.timeScale = 0; //pauses the game entirely
     }
