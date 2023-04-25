@@ -62,21 +62,21 @@ public class PlayerMovement : MonoBehaviour
         characterBody.MovePosition(newPosition); //The new position for the player
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) //Function when the character enters the water
     {
         
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ocean"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ocean")) //Is triggered when something enters the water
         {
-            velocity = velocity * 0.5f;
+            velocity = velocity * 0.5f; //Makes speed 0.5 times the original speed
             Debug.Log(speed);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision) //Function when the character exits the water
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ocean"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ocean")) //Is triggered when something enters the water
         {
-            velocity = velocity * 2f;
+            velocity = velocity * 2f; //Speed is set back to normal
             Debug.Log(speed);
         }
     }

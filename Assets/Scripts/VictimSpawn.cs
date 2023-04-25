@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class VictimSpawn : MonoBehaviour
 {
-    public GameObject victimToSpawn; // The object to be spawned  
+    public GameObject[] victimsToSpawn; // The object to be spawned  
 
     public int numberOfVictims = 5; //Number of victims to spawn
     public int minIndexX = -11; // The minimum index of the spawn points array on X axis
@@ -15,8 +15,9 @@ public class VictimSpawn : MonoBehaviour
     {
         //Spawn X number of victims on start
         for (int i = 0; i < numberOfVictims; i++)
-        {           
-            SpawnObject(victimToSpawn);
+        {   
+            
+            SpawnObject(victimsToSpawn[Random.Range(0, victimsToSpawn.Length)]);
 
         }
     }
