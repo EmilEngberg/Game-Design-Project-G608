@@ -35,7 +35,10 @@ public class PickUp : MonoBehaviour
                 if (Physics2D.OverlapCircle(transform.position + Direction, .4f, safeZone))
                 {                
                         scoreManager = GameObject.FindGameObjectWithTag("ScoreManager");
+                        //Adds a point if the Victim is within the safezone
                         scoreManager.GetComponent<ScoreManager>().AddPoints();
+                        //Destroys the item, so the player cant get infinite points  
+                        Destroy(itemHolding);
                 }
 
                 //check for rigidbody --> set simulated to true 
