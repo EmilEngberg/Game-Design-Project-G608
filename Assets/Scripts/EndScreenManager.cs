@@ -5,28 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class EndScreenManager : MonoBehaviour
 {
+    //Defining the different elements of the gameOverScreen
     public GameObject gameOverScreen;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI peopleLeftText;
     public TextMeshProUGUI countdownText;
 
-    public void SetGameOver()
+    public void SetGameOver() //Function that happens when the timer runs out
     {
-        gameOverScreen.SetActive(true);
+        gameOverScreen.SetActive(true); //The gameOverScreen will become visible
 
-        peopleLeftText.text = scoreText.text;
+        peopleLeftText.text = scoreText.text; //The scoreText will be shown with the score 
 
-        scoreText.gameObject.SetActive(false);
-        countdownText.gameObject.SetActive(false);
+        scoreText.gameObject.SetActive(false); //The scoreText UI gameObject is removed
+        countdownText.gameObject.SetActive(false); //The countdown timer UI gameObject is removed
 
-        Time.timeScale = 0;
+        Time.timeScale = 0; //pauses the game entirely
     }
 
-    public void RestartGame()
+    public void RestartGame() //button function that restarts the game
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SampleScene"); //The scene is restarted - game is loaded again.
         Debug.Log("Game Restarted");
-        gameOverScreen.SetActive(false);
-        Time.timeScale = 1;
+        gameOverScreen.SetActive(false); //The gameOverScreen is not active anymore
+        Time.timeScale = 1; //Game time is set back to normal
     }
 }
