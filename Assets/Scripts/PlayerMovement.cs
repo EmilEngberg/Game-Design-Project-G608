@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 10; //The default speed
+    public float speed = 3; //The default speed
     private Rigidbody2D characterBody;
     private Vector2 velocity;
     private Vector2 inputMovement;
     public Animator animator;
 
-    public int PowerUpBoost = 10; //Powerup speed
+    public int PowerUpBoost = 2; //Powerup speed
 
     public float speedBoostDuration = 5.0f; //Duration of the powerup in seconds
     private Coroutine speedBoostCoroutine;
@@ -29,14 +29,14 @@ public class PlayerMovement : MonoBehaviour
         {
         StopCoroutine(speedBoostCoroutine);
         } //Coroutine sets the velocity (speed) to the default speed + the boost speed
-        velocity = new Vector2(speed + PowerUpBoost, speed + PowerUpBoost);
+        velocity = velocity * PowerUpBoost;
         speedBoostCoroutine = StartCoroutine(SpeedBoostCoroutine()); 
     }
 
     private IEnumerator SpeedBoostCoroutine()
     {   //Waits for the value of the speed boost duration and stops the coroutine
         yield return new WaitForSeconds(speedBoostDuration);
-        velocity = new Vector2(speed, speed); //The speed is set back to the default speed only
+        velocity = velocity/PowerUpBoost; //The speed is set back to the default speed only
     }
     
     void Update()
