@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 inputMovement;
     public Animator animator;
 
-    public int PowerUpBoost = 2; //Powerup speed
+    public float PowerUpBoost = 2; //Powerup speed
 
     public float speedBoostDuration = 5.0f; //Duration of the powerup in seconds
     private Coroutine speedBoostCoroutine;
@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         if (speedBoostCoroutine != null)
         {
         StopCoroutine(speedBoostCoroutine);
+        velocity = velocity/PowerUpBoost; //The speed is set back to the default speed only
         } //Coroutine sets the velocity (speed) to the default speed + the boost speed
         velocity = velocity * PowerUpBoost;
         speedBoostCoroutine = StartCoroutine(SpeedBoostCoroutine()); 
@@ -35,8 +36,9 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator SpeedBoostCoroutine()
     {   //Waits for the value of the speed boost duration and stops the coroutine
-        yield return new WaitForSeconds(speedBoostDuration);
-        velocity = velocity/PowerUpBoost; //The speed is set back to the default speed only
+        yield return new WaitForSeconds(speedBoostDuration); 
+        velocity = velocity/PowerUpBoost;
+        speedBoostCoroutine = null; //The speed is set back to the default speed only
     }
     
     void Update()
