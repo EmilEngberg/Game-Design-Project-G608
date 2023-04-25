@@ -8,16 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D characterBody;
     private Vector2 velocity;
     private Vector2 inputMovement;
-    // private PickUp pickUp; 
-
-    private GameObject scoreManager;
 
     void Start()
     {
         velocity = new Vector2(speed, speed);
         characterBody = GetComponent<Rigidbody2D>();
-        /* pickUp = gameObject.GetComponent<PickUp>();
-        pickUp.Direction = new Vector2(0, -1); */
 
     }
     
@@ -27,14 +22,6 @@ public class PlayerMovement : MonoBehaviour
         Input.GetAxisRaw("Horizontal"),
         Input.GetAxisRaw("Vertical")
         ); 
-        
-        
-        /*if (inputMovement.sqrMagnitude > .1f) 
-        {
-            pickUp.Direction = inputMovement;        
-        }*/
-      
-
     }
 
     private void FixedUpdate()
@@ -43,13 +30,4 @@ public class PlayerMovement : MonoBehaviour
         Vector2 newPosition = characterBody.position + delta;
         characterBody.MovePosition(newPosition);
     }
-
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("SafeZone"))
-        {
-            scoreManager = GameObject.FindGameObjectWithTag("ScoreManager");
-            scoreManager.GetComponent<ScoreManager>().AddPoints();
-        }
-    }*/
 }
