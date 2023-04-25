@@ -9,19 +9,49 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 velocity;
     private Vector2 inputMovement;
 
+    public int PowerUpBoost = 10;
+
+    public float speedBoostDuration = 5.0f;
+    private Coroutine speedBoostCoroutine;
+
     void Start()
     {
         velocity = new Vector2(speed, speed);
         characterBody = GetComponent<Rigidbody2D>();
 
     }
+
+    public void ApplySpeedBoost()
+    {
+        if (speedBoostCoroutine != null)
+        {
+        StopCoroutine(speedBoostCoroutine);
+        }
+        velocity = new Vector2(speed + PowerUpBoost, speed + PowerUpBoost);
+        speedBoostCoroutine = StartCoroutine(SpeedBoostCoroutine());
+    }
+
+    private IEnumerator SpeedBoostCoroutine()
+    {
+        yield return new WaitForSeconds(speedBoostDuration);
+        velocity = new Vector2(speed, speed);
+    }
     
     void Update()
     {
         inputMovement = new Vector2(
         Input.GetAxisRaw("Horizontal"),
-        Input.GetAxisRaw("Vertical")
-        ); 
+        Input.GetAxisRaw("Vertical")); 
+
+    // Check for power-up collision
+    Collider2D powerUpCollider = Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("PowerUp"));
+
+    if (powerUpCollider != null)
+    {
+        // Apply speed boost and destroy power-up object
+        ApplySpeedBoost();
+        Destroy(powerUpCollider.gameObject);
+    }
     }
 
     private void FixedUpdate()
