@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - ScoreManager
+  - Victim
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - UI
   - Obstacle
   - SafeZone
-  - 
+  - Ocean
   - PickUp
   - ScoreManager
   - 
