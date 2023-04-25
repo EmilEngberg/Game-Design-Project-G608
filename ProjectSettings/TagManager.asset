@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - ScoreManager
   - Victim
+  - Saved
   layers:
   - Default
   - TransparentFX

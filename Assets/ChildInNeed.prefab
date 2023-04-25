@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5997053478219640158}
   - component: {fileID: 8460180576020763529}
   - component: {fileID: -3836968284124008258}
+  - component: {fileID: -1083768888026354185}
   m_Layer: 9
   m_Name: ChildInNeed
   m_TagString: Victim
@@ -204,3 +205,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-1083768888026354185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522269778139975820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab242f1028524774191b2401b87385b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: 0.1
+  waitingTime: 0.5
