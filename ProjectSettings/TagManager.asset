@@ -51,6 +51,9 @@ TagManager:
   - name: Obstacle
     uniqueID: 3959119617
     locked: 0
+  - name: PowerUps
+    uniqueID: 3114691183
+    locked: 0
   - name: Player
     uniqueID: 260495839
     locked: 0
