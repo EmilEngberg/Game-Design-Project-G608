@@ -167,7 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7978b859436f219429f5e2dff6564203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victimToSpawn: {fileID: 5522269778139975820, guid: b0aa9a0e8cc1df743ba39bed22ac185f, type: 3}
+  victimsToSpawn:
+  - {fileID: 5522269778139975820, guid: 4754811e74efa904fa6a1b43fe2adc73, type: 3}
+  - {fileID: 5522269778139975820, guid: b0aa9a0e8cc1df743ba39bed22ac185f, type: 3}
+  - {fileID: 5522269778139975820, guid: 107ea4f8b65a5704fbea5424bebeb8f5, type: 3}
   numberOfVictims: 5
   minIndexX: -12
   maxIndexX: 12
