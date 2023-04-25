@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int speed = 10;
+    public float speed = 10;
     private Rigidbody2D characterBody;
     private Vector2 velocity;
     private Vector2 inputMovement;
@@ -52,4 +52,23 @@ public class PlayerMovement : MonoBehaviour
             scoreManager.GetComponent<ScoreManager>().AddPoints();
         }
     }*/
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ocean"))
+        {
+            velocity = velocity * 0.5f;
+            Debug.Log(speed);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ocean"))
+        {
+            velocity = velocity * 2f;
+            Debug.Log(speed);
+        }
+    }
 }
