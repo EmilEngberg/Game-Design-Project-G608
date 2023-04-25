@@ -32,13 +32,16 @@ public class PickUp : MonoBehaviour
                 // remove item from the player
                 itemHolding.transform.parent = null;
 
+                //Checks if the item hold is place within the Safe Zone
                 if (Physics2D.OverlapCircle(transform.position + Direction, .4f, safeZone))
                 {                
                         scoreManager = GameObject.FindGameObjectWithTag("ScoreManager");
                         //Adds a point if the Victim is within the safezone
                         scoreManager.GetComponent<ScoreManager>().AddPoints();
-                        //Destroys the item, so the player cant get infinite points  
-                        Destroy(itemHolding);
+                    //Change the tag of the object so we know it is saved
+                    itemHolding.tag = "Saved";
+                    //Changes the position of the saved object so it is placed within a "Safety" area
+                    scoreManager.GetComponent<ScoreManager>().PlaceSavedVictim(itemHolding);
 
                 }
 
