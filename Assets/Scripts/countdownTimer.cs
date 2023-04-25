@@ -16,7 +16,7 @@ public class countdownTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentTime = startTime * 60;
+        currentTime = startTime * 60; //The current time is stored as seconds
 
     }
 
@@ -25,17 +25,18 @@ public class countdownTimer : MonoBehaviour
     {
         if (timerActive == true)
         {
-            currentTime = currentTime - Time.deltaTime;
-            if (currentTime <= 0)
+            currentTime = currentTime - Time.deltaTime; //If the timer is active, each frame decreases the current time,
+                                                        //with the amount of milliseconds that has passed since the last update
+            if (currentTime <= 0) //If the time gets to 0...
             {
-                timerActive = false;
-                Start();
-                endScreenManager.SetGameOver();
+                timerActive = false; //timerActive is set to false
+                Start(); //The Start() function is loaded again, causing a the timer to reset
+                endScreenManager.SetGameOver(); //the SetGameOver from EndScreenManager.cs starts, showing the end screen
                 Debug.Log("Game has ended!");
             }
         }
-        TimeSpan time = TimeSpan.FromSeconds(currentTime);
-        countdownText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
+        TimeSpan time = TimeSpan.FromSeconds(currentTime); //Stores the current time as seconds, makes it easy to convert to minutes
+        countdownText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString(); //Utilizes line 38 to display the time in minutes and seconds
     }
 
     public void StartTimer()
