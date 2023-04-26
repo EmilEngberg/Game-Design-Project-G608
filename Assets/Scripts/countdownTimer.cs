@@ -32,7 +32,7 @@ public class countdownTimer : MonoBehaviour
             {
                 timerActive = false; //timerActive is set to false
                 Start(); //The Start() function is loaded again, causing a the timer to reset
-                endScreenManager.SetGameOver(); //the SetGameOver from EndScreenManager.cs starts, showing the end screen
+                endScreenManager.SetGameOver(); //the SetGameOver from EndScreenManager.cs starts, showing the end screen               
                 Debug.Log("Game has ended!");
             }
         }
@@ -44,8 +44,9 @@ public class countdownTimer : MonoBehaviour
             //Checks if there is any victims left to save
             if(GameObject.FindGameObjectWithTag("Victim") == null)
             {
+                timerActive = false;
+                endScreenManager.SetYouWin();
                 Debug.Log("I WIN");
-                //MARTINS UI MAGI KOMMER HER
                 victimsSaved = true;
             }
         }

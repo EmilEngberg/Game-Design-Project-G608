@@ -5,13 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class EndScreenManager : MonoBehaviour
 {
-    //Defining the different elements of the gameOverScreen
-    public GameObject gameOverScreen;
+    //Defining the different elements of the in game UI
     public GameObject scoreTextBackground;
     public GameObject countdownTextBackground;
-    public TextMeshProUGUI scoreText;
     public TextMeshProUGUI peopleLeftText;
     public TextMeshProUGUI countdownText;
+
+    //Defining the different elements of the gameOverScreen
+    public GameObject gameOverScreen;
+    public TextMeshProUGUI scoreText;
+   
+    //Defining the different elements of the YouWinScreen
+    public GameObject YouWinScreen;
+    public TextMeshProUGUI YouWinText;
+    public TextMeshProUGUI SavedText;
 
     public void SetGameOver() //Function that happens when the timer runs out
     {
@@ -34,5 +41,18 @@ public class EndScreenManager : MonoBehaviour
         Debug.Log("Game Restarted");
         gameOverScreen.SetActive(false); //The gameOverScreen is not active anymore
         Time.timeScale = 1; //Game time is set back to normal
+    }
+
+    public void SetYouWin() //Function that plays when you save the day!
+    {
+        YouWinScreen.SetActive(true);
+
+        scoreText.gameObject.SetActive(false); //The scoreText UI gameObject is removed
+        scoreTextBackground.gameObject.SetActive(false); //The scoreText UI background gameObject is removed
+        countdownText.gameObject.SetActive(false); //The countdown timer UI gameObject is removed
+        countdownTextBackground.gameObject.SetActive(false); //The countdown timer background UI gameObject is removed
+
+        Time.timeScale = 0; //pauses the game entirely
+
     }
 }
