@@ -42,8 +42,10 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/countdownTimer.cs" />
      <Compile Include="Assets/Scripts/VictimSpawn.cs" />
+     <Compile Include="Assets/Scripts/ContinueScript.cs" />
      <Compile Include="Assets/Scripts/EndScreenManager.cs" />
      <Compile Include="Assets/Scripts/VictimScript.cs" />
+     <Compile Include="Assets/Scripts/CanvasTutorialControls.cs" />
      <Compile Include="Assets/Scripts/ScoreManager.cs" />
      <Compile Include="Assets/Scripts/PickUp.cs" />
      <Compile Include="Assets/Scripts/PlayerMovement.cs" />
