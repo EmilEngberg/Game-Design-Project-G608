@@ -247,7 +247,7 @@ MonoBehaviour:
   - {fileID: 5522269778139975820, guid: 4754811e74efa904fa6a1b43fe2adc73, type: 3}
   - {fileID: 5522269778139975820, guid: b0aa9a0e8cc1df743ba39bed22ac185f, type: 3}
   - {fileID: 5522269778139975820, guid: 107ea4f8b65a5704fbea5424bebeb8f5, type: 3}
-  numberOfVictims: 5
+  numberOfVictims: 7
   minIndexX: -12
   maxIndexX: 12
   minIndexY: 6
