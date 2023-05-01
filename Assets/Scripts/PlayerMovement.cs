@@ -15,16 +15,27 @@ public class PlayerMovement : MonoBehaviour
     public float speedBoostDuration = 5.0f; //Duration of the powerup in seconds
     private Coroutine speedBoostCoroutine;
 
+    //Variables for holding audio
+    private AudioSource audioSource;
+    public AudioClip powerUpSound;
+
     void Start()
     {   //Sets the speed in x and y, grabs the Rigidbody component from the inspector
         velocity = new Vector2(speed, speed);
         characterBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); 
-
+        
+        //Sets the audiosource component
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void ApplySpeedBoost()
-    {   //Creates a coroutine
+    {
+        //Sets and plays the sound for the powerup
+        audioSource.clip = powerUpSound;
+        audioSource.Play();
+
+        //Creates a coroutine
         if (speedBoostCoroutine != null)
         {
         StopCoroutine(speedBoostCoroutine);

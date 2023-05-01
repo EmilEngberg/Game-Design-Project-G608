@@ -20,9 +20,24 @@ public class EndScreenManager : MonoBehaviour
     public TextMeshProUGUI YouWinText;
     public TextMeshProUGUI SavedText;
 
+    //Variables for holding the music
+    private AudioSource backgroundAudio;
+    public AudioClip winAudio;
+    public AudioClip looseAudio;
+
+
+    public void Awake()
+    {
+        backgroundAudio = GetComponent<AudioSource>();
+    }
+
     public void SetGameOver() //Function that happens when the timer runs out
     {
         gameOverScreen.SetActive(true); //The gameOverScreen will become visible
+
+        //sets and plays the loosing audio
+        backgroundAudio.clip = looseAudio;
+        backgroundAudio.Play(0);
 
         peopleLeftText.text = scoreText.text; //The scoreText will be shown with the score 
 
@@ -46,6 +61,10 @@ public class EndScreenManager : MonoBehaviour
     public void SetYouWin() //Function that plays when you save the day!
     {
         YouWinScreen.SetActive(true);
+
+        //sets and plays the winning audio
+        backgroundAudio.clip = winAudio;
+        backgroundAudio.Play(0);
 
         scoreText.gameObject.SetActive(false); //The scoreText UI gameObject is removed
         scoreTextBackground.gameObject.SetActive(false); //The scoreText UI background gameObject is removed

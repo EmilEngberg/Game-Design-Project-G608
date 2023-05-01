@@ -14,8 +14,21 @@ public class ScoreManager : MonoBehaviour
 
     int score = 0;
 
+    //Holds the Audiosource
+    private AudioSource backgroundAudio;
+    //Holds the audio clip
+    public AudioClip backgroundMusic;
+
     private void Awake()
     {
+        //Stops background music from menu scenes
+        Destroy(GameObject.FindGameObjectWithTag("menuAmbiance"));
+
+        //Starts the background music, but never stops
+        backgroundAudio = GetComponent<AudioSource>();
+        backgroundAudio.clip = backgroundMusic;
+        backgroundAudio.Play(0);
+
         instance = this;
         savedVictimsArea = GetComponent<BoxCollider2D>();
     }

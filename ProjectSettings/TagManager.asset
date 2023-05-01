@@ -8,6 +8,7 @@ TagManager:
   - ScoreManager
   - Victim
   - Saved
+  - menuAmbiance
   layers:
   - Default
   - TransparentFX

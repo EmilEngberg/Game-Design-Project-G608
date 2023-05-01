@@ -18,8 +18,19 @@ public class PickUp : MonoBehaviour
 
     private GameObject scoreManager;
 
-    // Update is called once per frame
-    void Update()
+    //Variables for holding audio
+    private AudioSource audioSource;
+    public AudioClip victimSavedSound;
+    public AudioClip victimPickedUpSound;
+
+    public void Start() {
+        //Sets the audiosource component
+        audioSource = GetComponent<AudioSource>();
+    }
+    
+
+// Update is called once per frame
+void Update()
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
@@ -34,10 +45,15 @@ public class PickUp : MonoBehaviour
 
                 //Checks if the item hold is place within the Safe Zone
                 if (Physics2D.OverlapCircle(transform.position + Direction, .4f, safeZone))
-                {                
-                        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager");
-                        //Adds a point if the Victim is within the safezone
-                        scoreManager.GetComponent<ScoreManager>().AddPoints();
+                { 
+                    scoreManager = GameObject.FindGameObjectWithTag("ScoreManager");
+                    //Adds a point if the Victim is within the safezone
+                    scoreManager.GetComponent<ScoreManager>().AddPoints();
+
+                    //Sets and plays the sound for saving a victim
+                    audioSource.clip = victimSavedSound;
+                    audioSource.Play(0);
+
                     //Change the tag of the object so we know it is saved
                     itemHolding.tag = "Saved";
                     //Changes the position of the saved object so it is placed within a "Safety" area
@@ -61,6 +77,9 @@ public class PickUp : MonoBehaviour
                 // if there is an item we can pick up then:
                 if (pickUpItem)
                 {
+                    //Sets and plays the sound for saving a victim
+                    audioSource.clip = victimPickedUpSound;
+                    audioSource.Play(0);
                     //store it
                     itemHolding = pickUpItem.gameObject; 
                     // change the pos of the item to the holding spot

@@ -41,7 +41,7 @@ public class countdownTimer : MonoBehaviour
         
         if(victimsSaved == false)
         {   
-            //Checks if there is any victims left to save
+            //Checks if there is any victims left to save, if not prompts the win UI
             if(GameObject.FindGameObjectWithTag("Victim") == null)
             {
                 timerActive = false;

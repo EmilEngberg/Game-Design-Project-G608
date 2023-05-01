@@ -2913,6 +2913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanvasTutorialNarrative: {fileID: 195452309}
   CanvasTutorialControls: {fileID: 179114240}
+  ambianceMenuSound: {fileID: 8300000, guid: 2a8c52b5821cebb439ac3fa8504d74f3, type: 3}
 --- !u!1 &206679257
 GameObject:
   m_ObjectHideFlags: 3

@@ -11,6 +11,8 @@ public class ContinueScript : MonoBehaviour
     //Defining the different elements of the TutorialControls
     public GameObject CanvasTutorialControls;
 
+    
+
     public void ContinueButton() //Class for the continue button
     {
         CanvasTutorialNarrative.gameObject.SetActive(false); //Hides the story textbox
