@@ -74,4 +74,12 @@ public class EndScreenManager : MonoBehaviour
         Time.timeScale = 0; //pauses the game entirely
 
     }
+
+    public void RestartMainMenu() //button function that restarts the game
+    {
+        SceneManager.LoadScene("MainMenu"); //The scene is restarted - game is loaded again.
+        Debug.Log("Game Restarted - going back to main menu");
+        YouWinScreen.SetActive(false); //The YouWinScreen is not active anymore
+        Time.timeScale = 1; //Game time is set back to normal
+    }
 }

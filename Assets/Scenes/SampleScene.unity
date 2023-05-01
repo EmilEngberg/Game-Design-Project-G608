@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -265, y: 148}
+  m_AnchoredPosition: {x: -331.11, y: 171.6}
   m_SizeDelta: {x: 80, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8142269
@@ -335,11 +335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1283832659817342423, guid: 52219258637d6ab428be843166d3f641, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -220
+      value: -288.5
       objectReference: {fileID: 0}
     - target: {fileID: 1283832659817342423, guid: 52219258637d6ab428be843166d3f641, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 135
+      value: 158.3
       objectReference: {fileID: 0}
     - target: {fileID: 3472807872437070014, guid: 52219258637d6ab428be843166d3f641, type: 3}
       propertyPath: m_fontSize
@@ -627,11 +627,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6846206402597915828, guid: 52219258637d6ab428be843166d3f641, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 275
+      value: 341.3
       objectReference: {fileID: 0}
     - target: {fileID: 6846206402597915828, guid: 52219258637d6ab428be843166d3f641, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 135
+      value: 158.3
       objectReference: {fileID: 0}
     - target: {fileID: 7919428794199087414, guid: 52219258637d6ab428be843166d3f641, type: 3}
       propertyPath: m_RenderMode
@@ -18340,7 +18340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250.8, y: 148}
+  m_AnchoredPosition: {x: 318.4, y: 171.3}
   m_SizeDelta: {x: 120, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1796856306
@@ -18682,7 +18682,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 233847777}
         m_TargetAssemblyTypeName: EndScreenManager, Assembly-CSharp
-        m_MethodName: RestartGame
+        m_MethodName: RestartMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
