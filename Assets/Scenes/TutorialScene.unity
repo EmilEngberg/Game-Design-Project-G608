@@ -2537,7 +2537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2814,7 +2814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &195452310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2844,7 +2844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -19619,14 +19619,14 @@ MonoBehaviour:
 
 
     As Javier was sun tanning,
-    he would notice a sudden panic begin to spread between the people at the beach.
-    Most ran towards the beach promenade, but some would simply stand still and squirm
-    in horror. Out in the distance a tsunami could be seen.
+    he would notice a sudden panic beginning to spread between the people on the
+    beach. Most ran towards the beach promenade, but some would simply stand still
+    and squirm in horror. Out in the distance a tsunami could be seen.
 
 
-    With Javier as
-    the only capable person left on the beach, he knew what he had to do. He was
-    the only one that could save the people in distress.'
+    With
+    Javier as the only capable person left on the beach, he knew what he had to do.
+    He was the only one that could save the people in distress.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 870ba174ad8dadd468086ca456d90cf0, type: 2}
   m_sharedMaterial: {fileID: 4656602594653145350, guid: 870ba174ad8dadd468086ca456d90cf0, type: 2}
