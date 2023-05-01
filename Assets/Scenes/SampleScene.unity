@@ -321,6 +321,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 357045804953324573, guid: 52219258637d6ab428be843166d3f641, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1127858973233817532, guid: 52219258637d6ab428be843166d3f641, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -628,6 +632,10 @@ PrefabInstance:
     - target: {fileID: 6846206402597915828, guid: 52219258637d6ab428be843166d3f641, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919428794199087414, guid: 52219258637d6ab428be843166d3f641, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8147070724191750964, guid: 52219258637d6ab428be843166d3f641, type: 3}
       propertyPath: m_CullTransparentMesh
