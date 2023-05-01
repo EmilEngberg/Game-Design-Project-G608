@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1440
     height: 900
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -0.49741647, y: -0.42995238, z: -0.3726695}
     speed: 2
-    m_Value: {x: -0.49741647, y: -0.42995238, z: -0.3726695}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 17.043879
     speed: 2
-    m_Value: 17.043879
+    m_Value: 0.71414286
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -809,9 +809,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e65b0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: f2aaffff16afffff08b1ffff52b1ffffbebbffff54bcffffdabcffff70bdffffb2beffff24c0ffffe8c6ffff7cc7fffff6ccffff94ddffff38deffff8ee0ffff22e1ffffcae4ffff1ce6ffffd4e8ffff7eeeffff56effffff6efffff2af7ffffc6f7ffff94f8ffff58f9ffff00fbffff525c00008e5c0000b85c0000ac720000e8720000107300000477000040770000007c00003c7c0000d48000006c810000108500003a850000768500002a860000c2860000e2940000f6970000c29c0000e09c0000029e0000289f0000469f0000f2a40000
+      m_SelectedIDs: 765e0000
+      m_LastClickedID: 24182
+      m_ExpandedIDs: 96f7ffff56f8ffffeefaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -827,7 +827,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -980,23 +980,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 53
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: 53
   m_LastProjectPath: /Users/emilengberg/Documents/GitHub/Game-Design-Project-G608
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 985b0000
-    m_LastClickedID: 23448
-    m_ExpandedIDs: 00000000245b0000265b0000285b00002a5b00002c5b00002e5b0000305b0000325b0000345b0000365b0000385b0000425b000000ca9a3bffffff7f
+    m_SelectedIDs: 485b0000
+    m_LastClickedID: 23368
+    m_ExpandedIDs: 000000002a5b00002c5b00002e5b0000305b0000325b0000345b0000365b0000385b00003a5b00003c5b00003e5b0000485b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1024,7 +1024,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000245b0000265b0000285b00002a5b00002c5b00002e5b0000305b0000325b0000345b0000365b0000385b0000
+    m_ExpandedIDs: 000000002a5b00002c5b00002e5b0000305b0000325b0000345b0000365b0000385b00003a5b00003c5b00003e5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
